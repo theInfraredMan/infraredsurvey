@@ -580,6 +580,42 @@
       opacity: 0.4;
     }
 
+    /* ── EQUINE GALLERY ──────────────────────────────── */
+    .equine-gallery { flex-direction: column; display: flex; }
+
+    .equine-main {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .equine-thumbs {
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      background: rgba(0,0,0,0.4);
+      flex-wrap: wrap;
+    }
+
+    .equine-thumbs img {
+      height: 48px;
+      width: auto;
+      object-fit: cover;
+      border-radius: 4px;
+      cursor: pointer;
+      opacity: 0.65;
+      border: 2px solid transparent;
+      transition: opacity 0.15s, border-color 0.15s;
+    }
+
+    .equine-thumbs img:hover,
+    .equine-thumbs img.active {
+      opacity: 1;
+      border-color: var(--orange);
+    }
+
     /* ── RESPONSIVE ──────────────────────────────────── */
     @media (max-width: 700px) {
       nav { padding: 1rem 1.2rem; }
@@ -756,6 +792,26 @@
       </div>
     </div>
 
+    <div class="service-card">
+      <div class="video-wrap equine-gallery">
+        <img src="media/horse IR/Infrared Survey horse ligament .jpg" alt="Infrared thermal scan of horse ligament" class="equine-main">
+        <div class="equine-thumbs">
+          <img src="media/horse IR/IR_0742.jpg"       alt="Equine IR scan"         onclick="setEquineMain(this)">
+          <img src="media/horse IR/IR_0755.jpg"       alt="Equine IR scan"         onclick="setEquineMain(this)">
+          <img src="media/horse IR/IR_0768.jpg"       alt="Equine IR scan"         onclick="setEquineMain(this)">
+          <img src="media/horse IR/horse leg.jpg"     alt="Horse leg IR scan"      onclick="setEquineMain(this)">
+          <img src="media/horse IR/bad saddle fit.jpg" alt="Bad saddle fit IR"     onclick="setEquineMain(this)">
+          <img src="media/horse IR/saddle isc.jpg"    alt="Saddle infrared scan"   onclick="setEquineMain(this)">
+        </div>
+        <div class="video-overlay"></div>
+      </div>
+      <div class="service-info">
+        <span class="service-tag">Equine</span>
+        <h3>Equine Thermal Imaging</h3>
+        <p>Non-invasive infrared scanning for horses — detecting inflammation, ligament stress, saddle fit issues, and soft tissue injuries before they sideline your animal. Trusted by equine professionals across the Carolinas.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -840,5 +896,14 @@
   <p style="color:var(--muted);font-size:0.78rem;">Professional Thermal Imaging Services</p>
 </footer>
 
+
+<script>
+function setEquineMain(thumb) {
+  const main = thumb.closest('.equine-gallery').querySelector('.equine-main');
+  main.src = thumb.src;
+  thumb.closest('.equine-thumbs').querySelectorAll('img').forEach(t => t.classList.remove('active'));
+  thumb.classList.add('active');
+}
+</script>
 </body>
 </html>
