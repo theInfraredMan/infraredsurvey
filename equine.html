@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Equine Infrared Thermal Imaging | InfraredSurvey.com | Charlotte NC</title>
-  <meta name="description" content="Professional equine infrared thermal imaging in Charlotte, NC. Detect horse injuries, lameness, saddle fit issues, ligament stress, and inflammation non-invasively. Certified thermographer with 25+ years experience.">
+  <meta name="description" content="Professional equine infrared thermal imaging in Charlotte, NC. Detect horse injuries, lameness, saddle fit issues, ligament stress, and inflammation non-invasively. Certified thermographer with 35+ years experience. jc@infraredsurvey.com">
   <meta name="keywords" content="equine infrared Charlotte NC, horse thermal imaging, equine thermography North Carolina, horse lameness detection infrared, saddle fit infrared scan, equine IR survey, horse ligament infrared, equine thermographer Charlotte">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://infraredsurvey.com/equine.html">
+
   <meta property="og:title" content="Equine Infrared Thermal Imaging | InfraredSurvey.com">
   <meta property="og:description" content="Non-invasive thermal imaging for horses. Detect inflammation, lameness, and saddle fit problems before they become serious.">
   <meta property="og:url" content="https://infraredsurvey.com/equine.html">
@@ -30,146 +31,89 @@
   }
   </script>
 
+  <link rel="stylesheet" href="styles.css">
   <style>
-    :root {
-      --bg:      #07090f;
-      --bg2:     #0d1117;
-      --card:    rgba(255,255,255,0.04);
-      --border:  rgba(255,107,26,0.18);
-      --orange:  #ff6b1a;
-      --red:     #ff3200;
-      --yellow:  #ffc400;
-      --text:    #e8edf5;
-      --muted:   #8a9ab5;
-      --radius:  14px;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 50vh;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2.5rem;
-      background: rgba(7,9,15,0.85);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav-logo {
-      display: flex; align-items: center; gap: 0.6rem;
-      font-size: 1.1rem; font-weight: 700;
-      text-decoration: none; color: var(--text);
-    }
-
-    .nav-logo .icon {
-      width: 34px; height: 34px;
-      background: linear-gradient(135deg, var(--red), var(--orange));
-      border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-    }
-
-    .nav-logo span em { font-style: normal; background: linear-gradient(90deg, var(--orange), var(--yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--orange); }
-    .nav-links a.active { color: var(--orange); font-weight: 700; }
-
-    .nav-cta {
-      background: linear-gradient(135deg, var(--red), var(--orange));
-      color: #fff; border: none; padding: 0.55rem 1.3rem;
-      border-radius: 8px; font-weight: 600; font-size: 0.88rem;
-      cursor: pointer; text-decoration: none;
-      transition: opacity 0.2s, transform 0.2s;
-    }
-    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
-
-    /* HERO */
-    .hero {
-      min-height: 60vh;
-      display: flex; align-items: center; justify-content: center;
+      justify-content: center;
       text-align: center;
-      padding: 8rem 2rem 4rem;
-      position: relative; overflow: hidden;
+      padding: 5.5rem 2rem 4rem;
     }
 
     .glow {
-      position: absolute; border-radius: 50%;
-      filter: blur(90px); pointer-events: none;
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
     }
-    .glow-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(255,50,0,0.14), transparent 70%); top: -100px; left: 50%; transform: translateX(-50%); animation: pulse 6s ease-in-out infinite; }
-    .glow-2 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,196,0,0.08), transparent 70%); bottom: 0; right: 5%; animation: pulse 8s ease-in-out infinite reverse; }
-
-    @keyframes pulse { 0%,100%{opacity:.6;transform:scale(1) translateX(var(--tx,0))} 50%{opacity:1;transform:scale(1.15) translateX(var(--tx,0))} }
+    .glow-1 {
+      width: 500px; height: 450px;
+      background: radial-gradient(circle, rgba(255,50,0,0.14), transparent 70%);
+      top: -100px; left: 50%;
+      transform: translateX(-50%);
+      animation: pulse 6s ease-in-out infinite;
+    }
+    .glow-2 {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,196,0,0.08), transparent 70%);
+      bottom: 0; right: 5%;
+      animation: pulse 8s ease-in-out infinite reverse;
+    }
 
     .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      background: rgba(255,107,26,0.1); border: 1px solid rgba(255,107,26,0.3);
-      border-radius: 999px; padding: 0.35rem 1rem;
-      font-size: 0.8rem; font-weight: 600; color: var(--orange);
-      margin-bottom: 1.5rem; letter-spacing: 0.05em; text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,107,26,0.1);
+      border: 1px solid rgba(255,107,26,0.3);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
     }
-    .hero-badge::before { content: "🐴"; font-size: 1rem; }
+    .hero-badge::before { content: "🐴"; font-size: 1rem; margin-right: 0.2rem; }
 
-    .hero h1 {
+    .page-hero h1 {
       font-size: clamp(2.2rem, 5vw, 4rem);
-      font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 1rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
     }
-    .hero h1 .gradient {
+
+    .page-hero h1 .gradient {
       background: linear-gradient(90deg, var(--orange), var(--yellow), var(--orange));
       background-size: 200%;
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       animation: shimmer 4s linear infinite;
     }
-    @keyframes shimmer { 0%{background-position:0% 50%} 100%{background-position:200% 50%} }
 
-    .hero p { font-size: 1.1rem; color: var(--muted); max-width: 580px; margin: 0 auto 2rem; }
-
-    .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--red), var(--orange));
-      color: #fff; padding: 0.85rem 2rem; border-radius: 10px;
-      font-weight: 700; font-size: 1rem; text-decoration: none;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 24px rgba(255,50,0,0.3);
+    .page-hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 580px;
+      margin: 0 auto 2rem;
     }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,50,0,0.45); }
 
-    .btn-outline {
-      background: transparent; color: var(--text);
-      padding: 0.85rem 2rem; border-radius: 10px;
-      font-weight: 600; font-size: 1rem; text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.15);
-      transition: border-color 0.2s, background 0.2s;
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .btn-outline:hover { border-color: var(--orange); background: rgba(255,107,26,0.06); }
 
-    .thermal-divider { width:100%; height:2px; background:linear-gradient(90deg,transparent,var(--red),var(--orange),var(--yellow),var(--orange),var(--red),transparent); opacity:.4; }
-
-    /* GALLERY SECTION */
-    .content { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
-
-    .section-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--orange); margin-bottom: 0.75rem; }
-    .section-title { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 0.75rem; }
-    .section-sub { color: var(--muted); font-size: 1rem; max-width: 600px; margin-bottom: 2.5rem; }
-
-    /* Main lightbox-style viewer */
+    /* ── GALLERY ── */
     .gallery-viewer {
       background: var(--card);
       border: 1px solid var(--border);
@@ -197,7 +141,7 @@
     /* Thumbnail grid */
     .gallery-thumbs {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
       gap: 0.75rem;
       margin-bottom: 3rem;
     }
@@ -212,18 +156,15 @@
       aspect-ratio: 4/3;
       background: #0a0e1a;
     }
-
     .thumb-item:hover, .thumb-item.active {
       border-color: var(--orange);
       transform: translateY(-2px);
     }
-
     .thumb-item img {
       width: 100%; height: 100%;
       object-fit: cover;
       display: block;
     }
-
     .thumb-item .thumb-label {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -234,7 +175,7 @@
       font-weight: 500;
     }
 
-    /* Use cases grid */
+    /* ── USE CASES ── */
     .use-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -252,34 +193,13 @@
     .use-card:hover { border-color: rgba(255,107,26,0.4); }
     .use-card .icon { font-size: 1.8rem; margin-bottom: 0.75rem; }
     .use-card h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; }
-    .use-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
+    .use-card p  { font-size: 0.85rem; color: var(--muted); line-height: 1.55; }
 
-    /* CTA */
-    .cta-banner {
-      background: linear-gradient(135deg, rgba(255,50,0,0.12), rgba(255,196,0,0.08));
-      border: 1px solid rgba(255,107,26,0.25);
-      border-radius: 20px;
-      padding: 3.5rem 2rem;
-      text-align: center;
-      position: relative; overflow: hidden;
-      margin-bottom: 4rem;
-    }
-    .cta-banner::before { content:""; position:absolute; inset:0; background:radial-gradient(ellipse at center top, rgba(255,50,0,0.1), transparent 65%); pointer-events:none; }
-    .cta-banner h2 { font-size: clamp(1.6rem,3.5vw,2.4rem); font-weight:800; letter-spacing:-0.02em; margin-bottom:0.75rem; }
-    .cta-banner p { color:var(--muted); font-size:1rem; margin-bottom:1.8rem; }
-
-    footer {
-      background: var(--bg2); border-top: 1px solid var(--border);
-      padding: 2rem 2.5rem;
-      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
-    .footer-logo { font-weight:700; font-size:1rem; }
-    .footer-logo span { background:linear-gradient(90deg,var(--orange),var(--yellow)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-    footer p { color:var(--muted); font-size:0.82rem; }
-
-    @media (max-width:700px) {
-      nav { padding:1rem 1.2rem; }
-      .nav-links { display:none; }
+    /* ── MOBILE ── */
+    @media (max-width: 700px) {
+      .page-hero { min-height: auto; padding: 4rem 1.25rem 3rem; }
+      .gallery-thumbs { grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); }
+      .use-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -288,21 +208,21 @@
 <!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
-    <div class="icon">🌡</div>
-    <span>Infrared<em>Survey</em></span>
+    <img src="media/logo/company%20logo.jpg" alt="Infrared Survey Logo">
+    <span class="nav-logo-text">Infrared<em>Survey</em></span>
   </a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
   <ul class="nav-links">
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="equine.html" class="active">🐴 Equine</a></li>
-    <li><a href="index.html#why">Why Us</a></li>
-    <li><a href="index.html#process">Process</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="hvac.html">HVAC &amp; Industrial</a></li>
+    <li><a href="equine.html" class="active">Equine</a></li>
+    <li><a href="samples.html">Samples</a></li>
+    <li><a href="mailto:jc@infraredsurvey.com" class="nav-cta">Get a Quote</a></li>
   </ul>
-  <a href="mailto:jc@infraredsurvey.com" class="nav-cta">Get a Quote</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="page-hero">
   <div class="glow glow-1"></div>
   <div class="glow glow-2"></div>
   <div>
@@ -319,18 +239,16 @@
 <div class="thermal-divider"></div>
 
 <!-- GALLERY -->
-<div class="content" id="gallery">
+<div class="section-wrap" id="gallery">
   <div class="section-label">Thermal Image Gallery</div>
   <h2 class="section-title">Real Scans. Real Results.</h2>
   <p class="section-sub">Click any thumbnail below to view the full infrared scan. Each image reveals heat patterns invisible to the naked eye.</p>
 
-  <!-- Main viewer -->
   <div class="gallery-viewer">
     <img id="main-img" src="media/horse IR/Infrared Survey horse ligament .jpg" alt="Infrared scan of horse ligament">
     <div class="gallery-caption" id="main-caption">Infrared Survey — Horse Ligament Scan</div>
   </div>
 
-  <!-- Thumbnail strip -->
   <div class="gallery-thumbs">
     <div class="thumb-item active" onclick="setMain(this, 'media/horse IR/Infrared Survey horse ligament .jpg', 'Infrared Survey — Horse Ligament Scan')">
       <img src="media/horse IR/Infrared Survey horse ligament .jpg" alt="Horse ligament">
@@ -378,12 +296,12 @@
   <div class="use-grid">
     <div class="use-card">
       <div class="icon">🦵</div>
-      <h3>Lameness & Inflammation</h3>
+      <h3>Lameness &amp; Inflammation</h3>
       <p>Heat signatures pinpoint the exact location of inflammation in limbs, joints, and hooves — guiding targeted treatment before lameness progresses.</p>
     </div>
     <div class="use-card">
       <div class="icon">🎯</div>
-      <h3>Ligament & Tendon Stress</h3>
+      <h3>Ligament &amp; Tendon Stress</h3>
       <p>Stressed tendons and ligaments generate heat before they rupture. Infrared scanning is used as an early-warning tool by performance horse trainers.</p>
     </div>
     <div class="use-card">
@@ -411,11 +329,11 @@
   <!-- CTA -->
   <div class="cta-banner">
     <h2>Ready to Scan<br>Your Horse?</h2>
-    <p>Serving Charlotte, NC and surrounding areas across the Carolinas. Sessions available at your barn.</p>
+    <p class="cta-sub">Serving Charlotte, NC and surrounding areas across the Carolinas. Sessions available at your barn.</p>
     <a href="mailto:jc@infraredsurvey.com" class="btn-primary">Book a Session</a>
-    <p style="margin-top:1rem;font-size:0.95rem;">
-      <a href="mailto:jc@infraredsurvey.com" style="color:var(--orange);text-decoration:none;">jc@infraredsurvey.com</a>
-    </p>
+    <div class="cta-contact">
+      <a href="mailto:jc@infraredsurvey.com">jc@infraredsurvey.com</a>
+    </div>
   </div>
 </div>
 
@@ -423,9 +341,12 @@
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Infrared<span>Survey</span>.com</div>
+  <div class="footer-logo">
+    <img src="media/logo/company%20logo.jpg" alt="Infrared Survey">
+    <span class="footer-logo-text">Infrared<span>Survey</span>.com</span>
+  </div>
   <p>© 2026 InfraredSurvey.com · All rights reserved.</p>
-  <p><a href="index.html" style="color:var(--orange);text-decoration:none;font-size:0.82rem;">← Back to All Services</a></p>
+  <p><a href="hvac.html">HVAC Services</a> &nbsp;·&nbsp; <a href="index.html">Home</a></p>
 </footer>
 
 <script>

@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sample IR Reports | Infrared Survey Charlotte NC</title>
+  <meta name="description" content="Sample infrared thermal imaging reports from Infrared Survey Charlotte NC. Data center, electrical, mechanical, building envelope, and water leak detection surveys.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://infraredsurvey.com/samples.html">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 2rem 3.5rem;
+      text-align: center;
+    }
+
+    .hero-glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+    }
+    .glow-1 {
+      width: 500px; height: 400px;
+      background: radial-gradient(circle, rgba(255,50,0,0.13), transparent 70%);
+      top: -80px; left: 50%;
+      transform: translateX(-50%);
+      animation: pulse 6s ease-in-out infinite;
+    }
+
+    .page-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,107,26,0.1);
+      border: 1px solid rgba(255,107,26,0.3);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.9rem;
+    }
+
+    .page-hero h1 .gradient {
+      background: linear-gradient(90deg, var(--orange), var(--yellow), var(--orange));
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+
+    .page-hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* ── TABS ── */
+    .tabs-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .tabs-nav {
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: 0;
+      border-bottom: 2px solid rgba(255,255,255,0.06);
+      margin-bottom: 2.5rem;
+      -webkit-overflow-scrolling: touch;
+    }
+    .tabs-nav::-webkit-scrollbar { display: none; }
+
+    .tab-btn {
+      flex-shrink: 0;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.75rem 1.1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.2s, border-color 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+
+    .tab-btn:hover { color: var(--text); }
+
+    .tab-btn.active {
+      color: var(--orange);
+      border-bottom-color: var(--orange);
+    }
+
+    .tab-btn .tab-icon { font-size: 1rem; }
+
+    /* ── TAB PANELS ── */
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .panel-intro {
+      margin-bottom: 2rem;
+    }
+
+    .panel-intro h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .panel-intro p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      max-width: 600px;
+    }
+
+    /* ── REPORT CARDS ── */
+    .report-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .report-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.25s, transform 0.25s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+    }
+
+    .report-card:hover {
+      border-color: rgba(255,107,26,0.45);
+      transform: translateY(-3px);
+    }
+
+    .report-card-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .report-file-icon {
+      width: 46px;
+      height: 56px;
+      background: rgba(255,107,26,0.12);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .report-file-icon.img-icon {
+      background: rgba(26,107,255,0.12);
+      border-color: rgba(26,107,255,0.2);
+    }
+
+    .report-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .report-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--orange);
+      background: rgba(255,107,26,0.1);
+      border-radius: 4px;
+      padding: 0.15rem 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .report-meta h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+    }
+
+    .report-meta p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Image preview for non-PDF samples */
+    .report-preview {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    /* PDF embed */
+    .pdf-embed {
+      width: 100%;
+      height: 480px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #0a0e1a;
+      display: none;
+    }
+
+    .report-actions {
+      display: flex;
+      gap: 0.6rem;
+      margin-top: auto;
+      flex-wrap: wrap;
+    }
+
+    .btn-view {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--orange);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 7px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .btn-view:hover { background: #ff8a45; transform: translateY(-1px); }
+
+    .btn-expand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border2);
+      padding: 0.5rem 1rem;
+      border-radius: 7px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .btn-expand:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+    .embed-wrap { display: none; }
+    .embed-wrap.open { display: block; margin-top: 0.5rem; }
+    .embed-wrap iframe {
+      width: 100%;
+      height: 500px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #0a0e1a;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 700px) {
+      .page-hero { padding: 3.5rem 1.25rem 2.5rem; }
+      .tabs-wrap { padding: 0 1.25rem 3rem; }
+      .report-grid { grid-template-columns: 1fr; }
+      .embed-wrap iframe { height: 320px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="media/logo/company%20logo.jpg" alt="Infrared Survey Logo">
+    <span class="nav-logo-text">Infrared<em>Survey</em></span>
+  </a>
+  <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">&#9776;</button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="hvac.html">HVAC &amp; Industrial</a></li>
+    <li><a href="equine.html">Equine</a></li>
+    <li><a href="samples.html" class="active">Samples</a></li>
+    <li><a href="mailto:jc@infraredsurvey.com" class="nav-cta">Get a Quote</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="hero-glow glow-1"></div>
+  <div class="page-hero-badge">Sample Reports</div>
+  <h1>Real Reports.<br><span class="gradient">Real Results.</span></h1>
+  <p>Browse actual infrared survey reports across five categories. See the depth of analysis and detail you can expect from every inspection.</p>
+</section>
+
+<div class="thermal-divider"></div>
+
+<!-- TABS -->
+<div class="tabs-wrap">
+
+  <div class="tabs-nav" role="tablist">
+    <button class="tab-btn active" data-tab="datacenter" role="tab" aria-selected="true">
+      <span class="tab-icon">🖥️</span> Data Center
+    </button>
+    <button class="tab-btn" data-tab="electrical" role="tab" aria-selected="false">
+      <span class="tab-icon">⚡</span> Electrical
+    </button>
+    <button class="tab-btn" data-tab="mechanical" role="tab" aria-selected="false">
+      <span class="tab-icon">⚙️</span> Mechanical
+    </button>
+    <button class="tab-btn" data-tab="envelope" role="tab" aria-selected="false">
+      <span class="tab-icon">🏗️</span> Building Envelope
+    </button>
+    <button class="tab-btn" data-tab="water" role="tab" aria-selected="false">
+      <span class="tab-icon">💧</span> Water Leaks
+    </button>
+  </div>
+
+  <!-- DATA CENTER -->
+  <div class="tab-panel active" id="panel-datacenter">
+    <div class="panel-intro">
+      <h2>Data Center &amp; Server Room Surveys</h2>
+      <p>Thermal imaging of server racks, CRAC units, and raised floor systems — detecting hot spots, airflow bypass, and cooling inefficiencies before they cause downtime.</p>
+    </div>
+    <div class="report-grid">
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Data Center</span>
+            <h3>Server Room Application — IR Survey</h3>
+            <p>Thermal scan of server room equipment identifying heat anomalies, airflow deficiencies, and cooling performance.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/Sample%20%20IR%20server%20application%20Infraredsurvey.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/Sample%20%20IR%20server%20application%20Infraredsurvey.pdf" title="Server Room IR Report"></iframe>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Data Center</span>
+            <h3>Data Center Floor Air Leaks Survey</h3>
+            <p>Infrared survey of raised floor plenum identifying cold air bypass, tile leakage, and subfloor obstruction in a live data center environment.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/sample%20data%20floor%20air%20leaks%20ir%20survey%20with%20cover.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/sample%20data%20floor%20air%20leaks%20ir%20survey%20with%20cover.pdf" title="Data Floor Air Leaks Survey"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ELECTRICAL -->
+  <div class="tab-panel" id="panel-electrical">
+    <div class="panel-intro">
+      <h2>Electrical Panel &amp; Distribution Surveys</h2>
+      <p>Thermal scans of switchgear, breaker panels, bus bars, and connections — identifying overloaded circuits, loose terminations, and failing components before they become fire hazards.</p>
+    </div>
+    <div class="report-grid">
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Electrical</span>
+            <h3>Electrical Panel IR Survey</h3>
+            <p>Full thermal inspection of electrical distribution panels documenting heat differentials, overloaded circuits, and loose connections with prioritized corrective action.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/sample%20electrical%20%20ir%20survey%20%20no%20name%20sample.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/sample%20electrical%20%20ir%20survey%20%20no%20name%20sample.pdf" title="Electrical Panel IR Survey"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MECHANICAL -->
+  <div class="tab-panel" id="panel-mechanical">
+    <div class="panel-intro">
+      <h2>Mechanical Systems — Boiler &amp; Equipment Surveys</h2>
+      <p>Non-invasive thermal inspection of boilers, heat exchangers, and mechanical systems while under live load — detecting refractory failures, tube blockages, and insulation degradation without shutdown.</p>
+    </div>
+    <div class="report-grid">
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Mechanical</span>
+            <h3>Boiler Thermal Report</h3>
+            <p>Complete infrared survey of boiler system including refractory wall scan, heat distribution analysis, tube condition, and insulation integrity assessment.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/sample%20boiler%20ir%20report%20with%20cover.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/sample%20boiler%20ir%20report%20with%20cover.pdf" title="Boiler IR Report"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- BUILDING ENVELOPE -->
+  <div class="tab-panel" id="panel-envelope">
+    <div class="panel-intro">
+      <h2>Building Envelope &amp; Energy Surveys</h2>
+      <p>Thermal imaging of exterior walls, roofs, windows, and building systems — identifying insulation gaps, air infiltration, and energy loss pathways that drive up utility costs.</p>
+    </div>
+    <div class="report-grid">
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Building Envelope</span>
+            <h3>Building IR Survey — HVAC &amp; Moisture</h3>
+            <p>Comprehensive building envelope thermal scan covering exterior wall performance, HVAC system condition, and moisture intrusion mapping throughout the structure.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/sample%20building%20IR%20for%20HVAC%20and%20moisture%20w%20cover.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/sample%20building%20IR%20for%20HVAC%20and%20moisture%20w%20cover.pdf" title="Building Envelope Survey"></iframe>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Building Envelope</span>
+            <h3>Energy Survey Report</h3>
+            <p>Whole-building energy audit using infrared thermography to quantify heat loss through the building envelope and identify the highest-ROI areas for improvement.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/Sample%20energy%20survey%20ir%2009%20rough%20cannamela.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/Sample%20energy%20survey%20ir%2009%20rough%20cannamela.pdf" title="Energy Survey Report"></iframe>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon img-icon">🖼️</div>
+          <div class="report-meta">
+            <span class="report-tag">Building Envelope</span>
+            <h3>Roof IR Scan — Sample Image</h3>
+            <p>Aerial infrared image of a commercial roof showing moisture saturation patterns and insulation voids captured during a post-rain thermal survey.</p>
+          </div>
+        </div>
+        <img src="media/samples/sample%20IR%20reports/roof%20IR.jpg" alt="Roof infrared thermal scan" class="report-preview">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WATER LEAKS -->
+  <div class="tab-panel" id="panel-water">
+    <div class="panel-intro">
+      <h2>Water Leak &amp; Moisture Detection</h2>
+      <p>Infrared thermography pinpoints active moisture intrusion and water leak pathways inside walls, ceilings, and floors — locating the source without destructive investigation.</p>
+    </div>
+    <div class="report-grid">
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Water Leaks</span>
+            <h3>Building Moisture IR Report</h3>
+            <p>Thermal survey documenting active moisture intrusion zones, suspected leak pathways, and differential evaporation patterns to guide targeted remediation.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/sample%20building%20IR%20for%20HVAC%20and%20moisture%20AKS.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/sample%20building%20IR%20for%20HVAC%20and%20moisture%20AKS.pdf" title="Building Moisture IR Report AKS"></iframe>
+        </div>
+      </div>
+
+      <div class="report-card">
+        <div class="report-card-top">
+          <div class="report-file-icon">📄</div>
+          <div class="report-meta">
+            <span class="report-tag">Water Leaks</span>
+            <h3>HVAC &amp; Moisture Survey — MSS</h3>
+            <p>Combined HVAC performance and moisture intrusion survey identifying both mechanical deficiencies and water infiltration contributing to building performance issues.</p>
+          </div>
+        </div>
+        <div class="report-actions">
+          <a href="media/samples/sample%20IR%20reports/sample%20building%20IR%20for%20HVAC%20and%20moisture%20mss.pdf" target="_blank" class="btn-view">&#128196; Open Report</a>
+          <button class="btn-expand" onclick="toggleEmbed(this)">Preview &#9660;</button>
+        </div>
+        <div class="embed-wrap">
+          <iframe src="media/samples/sample%20IR%20reports/sample%20building%20IR%20for%20HVAC%20and%20moisture%20mss.pdf" title="Building Moisture Survey MSS"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div><!-- /tabs-wrap -->
+
+<div class="thermal-divider"></div>
+
+<!-- CTA -->
+<div class="section-wrap" style="padding-top: 3rem; padding-bottom: 3rem;">
+  <div class="cta-banner">
+    <h2>Want a Report Like This<br>for Your Facility?</h2>
+    <p class="cta-sub">Every survey includes thermal images, severity ratings, and clear corrective action recommendations — delivered within 24 hours.</p>
+    <a href="mailto:jc@infraredsurvey.com" class="btn-primary">Request a Survey</a>
+    <div class="cta-contact">
+      <a href="mailto:jc@infraredsurvey.com">jc@infraredsurvey.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="media/logo/company%20logo.jpg" alt="Infrared Survey">
+    <span class="footer-logo-text">Infrared<span>Survey</span>.com</span>
+  </div>
+  <p>© 2026 InfraredSurvey.com · All rights reserved.</p>
+  <p><a href="hvac.html">HVAC Services</a> &nbsp;·&nbsp; <a href="equine.html">Equine</a> &nbsp;·&nbsp; <a href="index.html">Home</a></p>
+</footer>
+
+<script>
+  // Tab switching
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById('panel-' + target).classList.add('active');
+    });
+  });
+
+  // PDF inline preview toggle
+  function toggleEmbed(btn) {
+    const wrap = btn.closest('.report-card').querySelector('.embed-wrap');
+    const isOpen = wrap.classList.contains('open');
+
+    // Lazy-load iframe src when first opened
+    if (!isOpen) {
+      const iframe = wrap.querySelector('iframe');
+      if (!iframe.src && iframe.dataset.src) {
+        iframe.src = iframe.dataset.src;
+      }
+      wrap.classList.add('open');
+      btn.textContent = 'Hide Preview ▲';
+    } else {
+      wrap.classList.remove('open');
+      btn.textContent = 'Preview ▼';
+    }
+  }
+</script>
+
+</body>
+</html>
