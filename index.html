@@ -344,24 +344,6 @@
       pointer-events: none;
     }
 
-    .play-btn {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: 52px; height: 52px;
-      background: rgba(255,107,26,0.85);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.3rem;
-      transition: background 0.2s, transform 0.2s;
-      pointer-events: none;
-      backdrop-filter: blur(4px);
-    }
-
-    .service-card:hover .play-btn {
-      background: var(--orange);
-      transform: translate(-50%, -50%) scale(1.08);
-    }
 
     .service-info {
       padding: 1.2rem 1.4rem 1.4rem;
@@ -607,12 +589,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/CRAC Media3.jpg">
           <source src="media/CRAC Media3.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">Data Center</span>
@@ -623,12 +604,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/RTU Media2.jpg">
           <source src="media/RTU Media2.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">HVAC</span>
@@ -639,12 +619,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/belt Media1.jpg">
           <source src="media/belt Media1.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">Mechanical</span>
@@ -655,12 +634,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/boiler Media3.jpg">
           <source src="media/boiler Media3.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">Boiler</span>
@@ -671,12 +649,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/boiler discharge Media3.jpg">
           <source src="media/boiler discharge Media3.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">Boiler</span>
@@ -687,12 +664,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/coil Media3.jpg">
           <source src="media/coil Media3.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">HVAC</span>
@@ -703,12 +679,11 @@
 
     <div class="service-card">
       <div class="video-wrap">
-        <video muted loop playsinline preload="none"
-               onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0">
+        <video muted loop playsinline controls preload="metadata"
+               poster="media/laminar flow Media3.jpg">
           <source src="media/laminar flow Media3.mp4" type="video/mp4">
         </video>
         <div class="video-overlay"></div>
-        <div class="play-btn">▶</div>
       </div>
       <div class="service-info">
         <span class="service-tag">Cleanroom</span>
