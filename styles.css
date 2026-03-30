@@ -107,6 +107,20 @@ nav {
 .nav-links a:hover { color: var(--text); background: rgba(255,255,255,0.05); }
 .nav-links a.active { color: var(--orange); font-weight: 600; }
 
+.nav-water {
+  color: #4d9fff !important;
+  font-weight: 600 !important;
+  border: 1px solid rgba(26,107,255,0.3) !important;
+}
+.nav-water:hover {
+  color: #7ab8ff !important;
+  background: rgba(26,107,255,0.08) !important;
+  border-color: rgba(26,107,255,0.5) !important;
+}
+.nav-water.active {
+  color: #4d9fff !important;
+}
+
 .nav-cta {
   background: linear-gradient(135deg, var(--red), var(--orange)) !important;
   color: #fff !important;
