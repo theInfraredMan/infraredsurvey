@@ -117,6 +117,15 @@ nav {
 }
 .nav-cta:hover { opacity: 0.88 !important; transform: translateY(-1px) !important; background: none !important; }
 
+.nav-water {
+  background: rgba(26,107,255,0.12) !important;
+  border: 1px solid rgba(26,107,255,0.3) !important;
+  color: #5a9eff !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+}
+.nav-water:hover { background: rgba(26,107,255,0.22) !important; color: #7eb5ff !important; }
+
 .nav-toggle {
   display: none;
   background: none;
