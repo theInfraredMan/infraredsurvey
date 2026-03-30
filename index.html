@@ -117,9 +117,9 @@
     /* ── PATHWAY CARDS ── */
     .pathways {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
-      max-width: 780px;
+      max-width: 1060px;
       margin: 0 auto;
     }
 
@@ -146,6 +146,10 @@
 
     .pathway-card.hvac::before {
       background: linear-gradient(90deg, var(--red), var(--orange), var(--yellow));
+    }
+
+    .pathway-card.water::before {
+      background: linear-gradient(90deg, #0ea5e9, #1a6bff, #38bdf8);
     }
 
     .pathway-card.equine::before {
@@ -308,6 +312,12 @@
       <div class="pathway-icon">🏭</div>
       <h2>HVAC &amp; Industrial</h2>
       <p>Boilers, RTUs, CRAC units, belt drives, coils, and laminar flow systems — scanned under live load.</p>
+      <span class="pathway-link">Explore Services</span>
+    </a>
+    <a href="water-leaks.html" class="pathway-card water">
+      <div class="pathway-icon">💧</div>
+      <h2>Water Leak Detection</h2>
+      <p>Slab leaks, roof leaks, plumbing &amp; more — found fast with thermal imaging. No destructive investigation needed.</p>
       <span class="pathway-link">Explore Services</span>
     </a>
     <a href="equine.html" class="pathway-card equine">
