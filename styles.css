@@ -324,6 +324,185 @@ footer p { color: var(--muted); font-size: 0.82rem; }
 footer a { color: var(--orange); text-decoration: none; }
 footer a:hover { color: var(--yellow); }
 
+/* ── REBATES SECTION ────────────────────────────────── */
+.rebates-section {
+  background: linear-gradient(160deg, #050c1f 0%, #071428 40%, #03080f 100%);
+  border-top: 1px solid rgba(255,196,0,0.18);
+  border-bottom: 1px solid rgba(255,196,0,0.18);
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.rebates-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 15% 50%, rgba(255,196,0,0.06), transparent),
+    radial-gradient(ellipse 60% 60% at 85% 30%, rgba(26,107,255,0.07), transparent);
+  pointer-events: none;
+}
+
+.rebates-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.rebates-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #ffc400;
+  background: rgba(255,196,0,0.1);
+  border: 1px solid rgba(255,196,0,0.25);
+  border-radius: 999px;
+  padding: 0.3rem 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.rebates-headline {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 0.9rem;
+  color: #fff;
+}
+
+.rebates-headline .rebates-amount {
+  background: linear-gradient(90deg, #ffc400, #ffdd60, #ffc400);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+.rebates-sub {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.65;
+}
+
+.rebates-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  max-width: 880px;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+
+.rebate-card {
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.75rem 1.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.rebate-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  border-radius: 16px 16px 0 0;
+}
+
+.rebate-card:hover {
+  transform: translateY(-5px);
+}
+
+.rebate-card.federal { border-color: rgba(255,196,0,0.2); }
+.rebate-card.federal::before { background: linear-gradient(90deg, #ffc400, #ffe566); }
+.rebate-card.federal:hover { border-color: rgba(255,196,0,0.5); box-shadow: 0 12px 40px rgba(255,196,0,0.14); }
+
+.rebate-card.state { border-color: rgba(0,200,100,0.2); }
+.rebate-card.state::before { background: linear-gradient(90deg, #00c864, #00ff99); }
+.rebate-card.state:hover { border-color: rgba(0,200,100,0.5); box-shadow: 0 12px 40px rgba(0,200,100,0.13); }
+
+.rebate-card.duke { border-color: rgba(26,107,255,0.2); }
+.rebate-card.duke::before { background: linear-gradient(90deg, #1a6bff, #00c9ff); }
+.rebate-card.duke:hover { border-color: rgba(26,107,255,0.5); box-shadow: 0 12px 40px rgba(26,107,255,0.15); }
+
+.rebate-card.usda { border-color: rgba(255,107,26,0.2); }
+.rebate-card.usda::before { background: linear-gradient(90deg, #ff6b1a, #ffb060); }
+.rebate-card.usda:hover { border-color: rgba(255,107,26,0.5); box-shadow: 0 12px 40px rgba(255,107,26,0.13); }
+
+.rebate-icon {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1;
+}
+
+.rebate-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.4rem;
+}
+
+.rebate-card.federal .rebate-name { color: #ffc400; }
+.rebate-card.state  .rebate-name { color: #00c864; }
+.rebate-card.duke   .rebate-name { color: #5a9eff; }
+.rebate-card.usda   .rebate-name { color: #ff8c40; }
+
+.rebate-amount {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+}
+
+.rebate-desc {
+  font-size: 0.83rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.rebates-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #e6a800, #ffc400, #ffe566);
+  color: #07090f;
+  padding: 1rem 2.4rem;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1.05rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 28px rgba(255,196,0,0.4);
+}
+
+.rebates-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 40px rgba(255,196,0,0.55);
+}
+
+.rebates-note {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+@media (max-width: 700px) {
+  .rebates-section { padding: 3.5rem 1.25rem; }
+  .rebates-grid { grid-template-columns: 1fr; max-width: 100%; }
+}
+
 /* ── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 700px) {
   nav { padding: 0 1.2rem; }
